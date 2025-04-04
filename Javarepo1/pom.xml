@@ -28,7 +28,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-<!-- Demmorenu1test -->
+<!-- Demmorenu1 -->
 	<build>
 		<plugins>
 			<plugin>
