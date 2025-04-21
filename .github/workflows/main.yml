@@ -10,3 +10,5 @@ jobs:
       uses: actions/checkout@v4
     - name: Build Java package
       run: mvn clean install -f Javarepo1/pom.xml
+    - name: SonarCloud Scan
+      run: mvn sonar:sonar -Dsonar.projectKey=renuka1217 -Dsonar.organization=renuka1217 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=renuka1217 -Dsonar.token=9c70fdd5f96264024dd1fc92a1267a812db09c6f
