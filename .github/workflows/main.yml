@@ -36,7 +36,7 @@ jobs:
       with:
        url: "http://13.235.50.208:8080"
        user: "admin"
-       token: ${{ secrets.JENKINS_TOKEN }}
+       token: "Root123$"
        job: "Continuousdeployment"   
     - name: SonarCloud Scan
       run: mvn sonar:sonar -f Javarepo1/pom.xml -Dsonar.projectKey=renuka12171 -Dsonar.organization=renuka12171 -Dsonar.branch.name=main -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=c88489b230bcedbfdf66a45ef3d607188203e3a6
