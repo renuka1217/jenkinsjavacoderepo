@@ -1,6 +1,6 @@
 pipeline{
 tools{
-maven 'mymaven'
+maven 'maven'
 }
 agent any
 stages{
