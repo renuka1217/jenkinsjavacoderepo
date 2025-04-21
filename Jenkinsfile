@@ -7,7 +7,7 @@ stages{
 stage ('Clone a repo')
 {
 steps {
-git 'https://github.com/renuka1217/jenkinsjavacoderepo.git'
+git credentialsId: 'renuka1217', url: 'https://github.com/renuka1217/jenkinsjavacoderepo.git', branch: 'main'
 }
 }
 stage ('Package the code')
