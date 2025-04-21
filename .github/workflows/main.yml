@@ -31,5 +31,12 @@ jobs:
         ./target/*.war => /tmp/
        last_ssh: |
         ls -lart /tmp
-    #- name: SonarCloud Scan
-     # run: mvn sonar:sonar -f Javarepo1/pom.xml -Dsonar.projectKey=renuka12171 -Dsonar.organization=renuka12171 -Dsonar.branch.name=main -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=c88489b230bcedbfdf66a45ef3d607188203e3a6
+    - name: Invoke Jenkins Deployment Job
+      uses: appleboy/jenkins-action@master
+      with:
+       url: "http://13.235.50.208:8080"
+       user: "admin"
+       token: ${{ secrets.JENKINS_TOKEN }}
+       job: "Continuousdeployment"   
+    - name: SonarCloud Scan
+      run: mvn sonar:sonar -f Javarepo1/pom.xml -Dsonar.projectKey=renuka12171 -Dsonar.organization=renuka12171 -Dsonar.branch.name=main -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=c88489b230bcedbfdf66a45ef3d607188203e3a6
