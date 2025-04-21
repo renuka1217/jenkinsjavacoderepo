@@ -13,7 +13,7 @@ git credentialsId: 'renuka1217', url: 'https://github.com/renuka1217/jenkinsjava
 stage ('Package the code')
 {
 steps{
-sh 'mvn package'
+sh 'mvn package -f Javarepo1/pom.xml'
 }
 }
 stage ('Deploy the code')
