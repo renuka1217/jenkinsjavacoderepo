@@ -10,7 +10,3 @@ jobs:
       uses: actions/checkout@v4
     - name: Build Java package
       run: mvn clean install -f Javarepo1/pom.xml
-    - name: SonarCloud Scan
-      run: mvn sonar:sonar -f Javarepo1/pom.xml  -Dsonar.projectKey=Simplilearndemo_java -Dsonar.organization=Simplilearndemo -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=9c70fdd5f96264024dd1fc92a1267a812db09c6f
-
-
