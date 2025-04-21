@@ -4,6 +4,12 @@ maven 'mymaven'
 }
 agent any
 stages{
+stage ('Clone a repo')
+{
+steps {
+git 'https://github.com/github-simplilearn-net/MavenBuild.git'
+}
+}
 stage ('Package the code')
 {
 steps{
